@@ -1,8 +1,10 @@
 <?php
 
 use App\Http\Controllers\ProfileController;
+use App\Models\User;
 use Illuminate\Support\Facades\Route;
-use Illuminate\Support\Facades\DB;
+use PharIo\Manifest\Email;
+
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -16,9 +18,25 @@ use Illuminate\Support\Facades\DB;
 
 Route::get('/', function () {
     // return view('welcome');
-    // fecthing all users
-    $users=DB::table('users')->pluck('email','name');
-    dd($users);
+    // fecthing all users with elquent model
+    $users=User::find(3);
+
+    // create new user
+    // $user = DB::table('users')->insert(["name"=>"ahmedemad","password"=>"123456789","email"=>"ahmed@emad.com"]);
+
+
+    // $user = User::create([
+    //     "name"=>"hymannnnn","email"=>"hymannnnnnnn@emasd.com","password"=>"123456789"
+    // ]);
+    //update user
+    // $user = DB::table('users')->where("id",2)->update(["email"=>"upadted email@gmail.com"]);
+
+    //Delete user
+    // $user = DB::table('users')->where("id",2)->delete();
+
+    // dd($users);
+
+    return view('welcome');
 });
  
 Route::get('/dashboard', function () {
