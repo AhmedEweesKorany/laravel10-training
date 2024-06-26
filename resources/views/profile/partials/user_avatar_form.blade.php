@@ -1,8 +1,13 @@
 <section>
     <header>
-        <h2 class="text-lg font-medium text-gray-900 dark:text-gray-100">
-user avatar form 
+  <div class="flex gap-4 items-center">
+    <h2 class="text-lg font-medium text-gray-900 dark:text-gray-100">
+        user avatar form 
+            
+        
         </h2>
+        <img src="{{"/storage/$user->avatar"}}" alt="dddddd" class="w-10 h-10 rounded-full">
+  </div>
 
         <p class="mt-1 text-sm text-gray-600 dark:text-gray-400">
 add or update your own user avatar        </p>
