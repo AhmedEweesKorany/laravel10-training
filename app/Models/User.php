@@ -19,9 +19,10 @@ class User extends Authenticatable
      *
      * @var array<int, string>
      */
-    protected $fillable = [
+    protected $fillable = [ // $fillable is opposite of guardede 
         'name',
         'email',
+        'avatar',
         'password',
     ];
 
